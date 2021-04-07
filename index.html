@@ -1,23 +1,24 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Initiation à la statistique textuelle</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Grégoire Le Campion" />
+    <link href="index_files/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Initiation à la statistique textuelle
+### Grégoire Le Campion
+### Lundi 26 avril
+
 ---
-title: "Initiation à la statistique textuelle"
-author: "Grégoire Le Campion"
-date : "Lundi 26 avril"
-output:
-  xaringan::moon_reader:
-    css: ["custom.css", "hygge"]
-    chakra: "libs/remark-latest.min.js"
-    self_contained: false
-    smart: true
-    nature:
-    autoplay: false
-knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = "index.html") })
----
-
-```{r setup, echo=FALSE}
-library(knitr)
 
 
-```
+
 
 
 class: center, middle, inverse
@@ -43,11 +44,11 @@ class: center, middle, inverse
 ### Objectifs
 
 Avant de commencer voici ce que cet atelier n'est pas :
-  >1. Ce n'est pas un cours magistral.
+  &gt;1. Ce n'est pas un cours magistral.
 1. Ce n'est pas une formation exhaustive et complète sur l'analyse de contenu textuel.
 
 Et voilà nos objectifs :
-  >1. Echanger autour de l'analyse textuelle.
+  &gt;1. Echanger autour de l'analyse textuelle.
 1. Vous données quelques clés pour plonger dans ce monde.
 1. Tester et maniper par vous même.
 1. En bonus : vous donner envie d'en faire plus
@@ -67,12 +68,12 @@ class: center, middle, inverse
 ### Le monde de l'analyse textuelle
 
 L'analyse textuelle c'est quoi ?
-  > C'est tout simplement le fait d'analyser du texte !
+  &gt; C'est tout simplement le fait d'analyser du texte !
 
 Cette définition n'a effectivement aucun intérêt.
 
 Mais elle a le mérite de laisser entrevoir à quel point le monde de l'analyse textuelle est vaste et les possiblités énormes 
-  > On va pouvoir travailler sur n'importe quelle sources textuelles : Les ouvrages littéraires, les pièces de théatre, les discours, les textes de lois, des sites web, des flux RSS, des forums... **ET bien sur des questions ouvertes d'enquêtes, des focus groupes ou des entretiens.**
+  &gt; On va pouvoir travailler sur n'importe quelle sources textuelles : Les ouvrages littéraires, les pièces de théatre, les discours, les textes de lois, des sites web, des flux RSS, des forums... **ET bien sur des questions ouvertes d'enquêtes, des focus groupes ou des entretiens.**
   
 .full-width.content-box-green[Le corollaire indésirable c'est que l'on trouve une quantité énorme de méthodes, d'approches et d'outils. Avec en plus souvent un mélange et une confusion entre méthodes, approches et outils.]
 
@@ -99,7 +100,7 @@ Les logiciels auront pour objectif de faciliter ce travail en permettant des ann
 ### Quali VS Quanti 2
 
 La statistique textuelle a elle pour objectif de comparer des textes sur la base d'une étude quantitative des mots. On va chercher quels sont les mots qui caractérisent nos textes par leur présence ou absence.
-  > On va s'intéresser à la forme des textes en faisant abstraction de leur contenu. Et faire émerger le contenu de textes, leurs sens au-delà de leur forme.
+  &gt; On va s'intéresser à la forme des textes en faisant abstraction de leur contenu. Et faire émerger le contenu de textes, leurs sens au-delà de leur forme.
 
 Avec les logiciels on pourra faire des résumes automatiques, compter les mots, identifier des thèmes, trouver des structures, analyser des relations.
 Bref pas si différents de l'analyse quali.
@@ -111,7 +112,7 @@ Bref pas si différents de l'analyse quali.
 
 Ces deux familles se distinguent par leurs approches, méthodes et outils différents mais pas par les données textuelles en elles mêmes.
 
-  >Le choix se fera finalement en fonction de vos préférences, de pratiques disciplinaires ou des caractérisiques de l'analyses que vous souhaitez réaliser.
+  &gt;Le choix se fera finalement en fonction de vos préférences, de pratiques disciplinaires ou des caractérisiques de l'analyses que vous souhaitez réaliser.
 
 
 .important[
@@ -125,7 +126,7 @@ C'est une bonne question, sans vraiment de réponse.
 Il n'existe pas d'outil parfait, hormis celui que vous maitrisez et qui vous permet de répondre à vos hypothèses et questions.
 
 Dans les faits il faudra souvent associer différents outils, en reflichissant à vos contraintes :
-  > Outils gratuits VS outils payants / En français VS dans une autre langue / User friendly VS techniques / Tutoriel complet VS débrouillez-vous...
+  &gt; Outils gratuits VS outils payants / En français VS dans une autre langue / User friendly VS techniques / Tutoriel complet VS débrouillez-vous...
 
 ---
 class: center, middle, inverse
@@ -152,10 +153,10 @@ Le segment de texte : Une portion de texte, la taille de ce segment peut varier.
 ### Lemmatisation et stemmatisation
 
 La lemmatisation : C'est rattacher un ou plusieurs mots à une forme dite racine. (Lebart, Salem, 1994)
-  > .small[C'est à dire convertir les formes verbales sous leur forme infinitive, les substantifs au singulier, et les noms et adjectifs au masculin singulier. Par exemple : le chat, les chats et la chatte réunit sou sune seule forme : le chat.]
+  &gt; .small[C'est à dire convertir les formes verbales sous leur forme infinitive, les substantifs au singulier, et les noms et adjectifs au masculin singulier. Par exemple : le chat, les chats et la chatte réunit sou sune seule forme : le chat.]
 
 La stemmatisation : C'est conserver que le radical des mots, pour regrouper sous le même radical tous les mots d'une famille.
-  > Par exemple : reunir le chat, leschats, les chatons et la chatte sous la forme de cha
+  &gt; Par exemple : reunir le chat, leschats, les chatons et la chatte sous la forme de cha
 
 ---
 ### Précision sur la lemmatisation et la stemmatisation
@@ -167,10 +168,10 @@ En effet, on procède finalement a une réduction d'une nombre de forme. Ce n'es
 Par exemple :]
 
 .small[.full-width.content-box-green[voici des réponses données par des conducteurs RATP sur leur métier:
-Conduire / Passager / Boire => Mais ce n'est pas boire mais bus, que le logiciel a pris pour une forme conjuguée du verbe.]]
+Conduire / Passager / Boire =&gt; Mais ce n'est pas boire mais bus, que le logiciel a pris pour une forme conjuguée du verbe.]]
 
 .small[.full-width.content-box-green[Réponses des conducteurs sur leur rapport à leur voiture :
-Prendre / Route / Vole => Mais Vole est le lemme du participe présent de volant alors qu'en réalité il s'agit du volant de la voiture.]]
+Prendre / Route / Vole =&gt; Mais Vole est le lemme du participe présent de volant alors qu'en réalité il s'agit du volant de la voiture.]]
 
 ---
 
@@ -198,9 +199,7 @@ Pour ce faire nous allons utiliser le logiciel Iramuteq.
 
 Il s'agit d'un logiciel libre, c'est à dire avec un code ouvert et gratuit. C'est un logiciel français avec une documentation riche et un grand nombre de tutoriel en français : https://www.iramuteq.org
 
-```{r, echo=FALSE, out.width = "50%", fig.align='center'}
-knitr::include_graphics("images/iramuteq.png")
-```
+&lt;img src="images/iramuteq.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 ### Préambule : Nos données
@@ -209,9 +208,7 @@ Nous allons analyser un corpus de 96 présentations des masters de sociologie en
 
 La mise en forme pour utiliser Iramuteq est très particulière mais très bien décrit ici : http://www.iramuteq.org/documentation/html/2-2-2-les-regles-de-formatages
 
-```{r, echo=FALSE, out.width = "100%", fig.align='center'}
-knitr::include_graphics("images/mf_donnees.png")
-```
+&lt;img src="images/mf_donnees.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: center, middle, inverse
@@ -219,4 +216,105 @@ class: center, middle, inverse
 
 
 ![go](images/lets_go.gif)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
 
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
