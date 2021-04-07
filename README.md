@@ -1,3 +1,3 @@
-Slides de présentation sur le test du Khi2. 
+Slides de présentation initiation à l'analyse de contenu IUT 
 
-Voir aussi [l'appli shiny](https://github.com/juba/khi2_shiny_app) correspodante.
+ [ICI]()
